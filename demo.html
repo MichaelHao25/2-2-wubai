@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		window.addEventListener("deviceorientation", orientationHandler, false);
+
+		function orientationHandler(event) {
+			deg = Math.round(-event.gamma) + "deg";
+			console.log(deg)
+    }
+
+</script>
+</body>
+</html>
