@@ -26,36 +26,164 @@
 		position absolute
 		top 0
 		left 0
-		transform-origin 70px bottom
+		// transform-origin 70px bottom
+		transform-origin center bottom
+		transition 0.3s
 		img
-			width 92px
+			width 100%
+			// width 92px
 	.sign-1
-		top 90px
-		left 90px
+		// top 90px
+		// left 90px
+		width 173px
+		top 110px
+		left 102px
 	.sign-2
-		top 130px
-		left 40px
+		// top 130px
+		// left 40px
+		width 158px
+		top 135px
+		left 85px
 	
 	.sign-3
-		top 55px
-		left 39px
+		// top 55px
+		// left 39px
+		width 119px
+		top 37px
+		left 38px
 	
 	.sign-4
-		top 130px
-		left 10px
+		// top 130px
+		// left 10px
+		width 122px
+		top 117px
+		left 7px
 	
 	.sign-5
-		top 60px
-		left -10px
+		// top 60px
+		// left -10px
+		width 134px
+		top 45px
+		left -38px
 	
 	.sign-6
-		top 100px
-		left 45px
-	
+		// top 100px
+		// left 45px
+		width 141px
+		top 81px
+		left 105px
 	.sign-7
+		// top 140px
+		// left -20px
+		width 155px
 		top 140px
-		left -20px
-	.luck-draw-sign-wrap
+		left -77px
+	// .luck-draw-sign-wrap
 		// transform translate(20px, 0)
 		// transform-origin center bottom
 		// transform rotate(30deg)
+
+
+
+.sign-1 {-webkit-animation: swing2 4s linear infinite;  -moz-animation: swing2 4s linear infinite; animation: swing2 4s linear infinite;}
+.sign-2 {-webkit-animation: swing2 4s linear infinite;  -moz-animation: swing2 4s linear infinite; animation: swing2 4s linear infinite;}
+.sign-3 {-webkit-animation: swing1 3.5s linear infinite;  -moz-animation: swing1 4s linear infinite; animation: swing1 4s linear infinite;}
+.sign-4 {-webkit-animation: swing2 4.5s linear infinite;  -moz-animation: swing2 4s linear infinite; animation: swing2 4s linear infinite;}
+.sign-5 {-webkit-animation: swing1 4s linear infinite;  -moz-animation: swing1 4s linear infinite; animation: swing1 4s linear infinite;}
+.sign-6 {-webkit-animation: swing1 4s linear infinite;  -moz-animation: swing2 4s linear infinite; animation: swing2 4s linear infinite;}
+.sign-7 {-webkit-animation: swing1 4s linear infinite;  -moz-animation: swing1 4s linear infinite; animation: swing1 4s linear infinite;}
+.sign-8 {-webkit-animation: swing1 4s linear infinite;  -moz-animation: swing2 4s linear infinite; animation: swing2 4s linear infinite;}
+.sign-9 {-webkit-animation: swing2 4s linear infinite;  -moz-animation: swing1 4s linear infinite; animation: swing1 4s linear infinite;}
+
+
+
+@-webkit-keyframes swing1 {
+	20% {
+		-webkit-transform: rotate3d(0, 0, 1, 20deg);
+		transform: rotate3d(0, 0, 1, 20deg)
+	}
+	40% {
+		-webkit-transform: rotate3d(0, 0, 1, -15deg);
+		transform: rotate3d(0, 0, 1, -15deg)
+	}
+	60% {
+		-webkit-transform: rotate3d(0, 0, 1, 10deg);
+		transform: rotate3d(0, 0, 1, 10deg)
+	}
+	80% {
+		-webkit-transform: rotate3d(0, 0, 1, -5deg);
+		transform: rotate3d(0, 0, 1, -5deg)
+	}
+	100%,0% {
+		-webkit-transform: rotate3d(0, 0, 1, 0deg);
+		transform: rotate3d(0, 0, 1, 0deg)
+	}
+}
+
+@keyframes swing1 {
+	20% {
+		-webkit-transform: rotate3d(0, 0, 1, 20deg);
+		transform: rotate3d(0, 0, 1, 20deg)
+	}
+	40% {
+		-webkit-transform: rotate3d(0, 0, 1, -15deg);
+		transform: rotate3d(0, 0, 1, -15deg)
+	}
+	60% {
+		-webkit-transform: rotate3d(0, 0, 1, 10deg);
+		transform: rotate3d(0, 0, 1, 10deg)
+	}
+	80% {
+		-webkit-transform: rotate3d(0, 0, 1, -5deg);
+		transform: rotate3d(0, 0, 1, -5deg)
+	}
+	100%,0% {
+		-webkit-transform: rotate3d(0, 0, 1, 0deg);
+		transform: rotate3d(0, 0, 1, 0deg)
+	}
+}
+@-webkit-keyframes swing2 {
+	20% {
+		-webkit-transform: rotate3d(0, 0, 1, -15deg);
+		transform: rotate3d(0, 0, 1, -15deg)
+	}
+	40% {
+		-webkit-transform: rotate3d(0, 0, 1, 10deg);
+		transform: rotate3d(0, 0, 1, 10deg)
+	}
+	60% {
+		-webkit-transform: rotate3d(0, 0, 1, -5deg);
+		transform: rotate3d(0, 0, 1, -5deg)
+	}
+	80% {
+		-webkit-transform: rotate3d(0, 0, 1, 5deg);
+		transform: rotate3d(0, 0, 1, 5deg)
+	}
+	100%,0% {
+		-webkit-transform: rotate3d(0, 0, 1, 0deg);
+		transform: rotate3d(0, 0, 1, 0deg)
+	}
+}
+
+@keyframes swing2 {
+	20% {
+		-webkit-transform: rotate3d(0, 0, 1, -15deg);
+		transform: rotate3d(0, 0, 1, -15deg)
+	}
+	40% {
+		-webkit-transform: rotate3d(0, 0, 1, 10deg);
+		transform: rotate3d(0, 0, 1, 10deg)
+	}
+	60% {
+		-webkit-transform: rotate3d(0, 0, 1, -5deg);
+		transform: rotate3d(0, 0, 1, -5deg)
+	}
+	80% {
+		-webkit-transform: rotate3d(0, 0, 1, 5deg);
+		transform: rotate3d(0, 0, 1, 5deg)
+	}
+	100%,0% {
+		-webkit-transform: rotate3d(0, 0, 1, 0deg);
+		transform: rotate3d(0, 0, 1, 0deg)
+	}
+}

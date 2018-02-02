@@ -17,13 +17,13 @@
 	<div class="mobile-wrap center luck-draw">
         <div class="luck-draw-wrap">
             <div class="luck-draw-sign-wrap" style="transform:translate(20px, 0);">
-                <div class="luck-draw-sign sign-1" style="transform:rotate3d(0, 0, 1,30deg);" deg = "30deg" data-rand-max="36" data-rand-min="24"><img src="img/luck-draw-sign.png" alt=""></div>
-                <div class="luck-draw-sign sign-2" style="transform:rotate3d(0, 0, 1,20deg);" deg = "20deg" data-rand-max="26" data-rand-min="14"><img src="img/luck-draw-sign.png" alt=""></div>
-                <div class="luck-draw-sign sign-3" style="transform:rotate3d(0, 0, 1,0deg);" deg = "0deg" data-rand-max="6" data-rand-min="-6"><img src="img/luck-draw-sign.png" alt=""></div>
-                <div class="luck-draw-sign sign-4" style="transform:rotate3d(0, 0, 1,-4deg);" deg = "-4deg" data-rand-max="2" data-rand-min="-2"><img src="img/luck-draw-sign.png" alt=""></div>
-                <div class="luck-draw-sign sign-5" style="transform:rotate3d(0, 0, 1,-10deg);" deg = "-10deg" data-rand-max="-4" data-rand-min="4"><img src="img/luck-draw-sign.png" alt=""></div>
-                <div class="luck-draw-sign sign-6" style="transform:rotate3d(0, 0, 1,12deg);" deg = "12deg" data-rand-max="18" data-rand-min="6"><img src="img/luck-draw-sign.png" alt=""></div>
-                <div class="luck-draw-sign sign-7" style="transform:rotate3d(0, 0, 1,-20deg);" deg = "-20deg" data-rand-max="-14" data-rand-min="14"><img src="img/luck-draw-sign.png" alt=""></div>
+                <div class="luck-draw-sign sign-1" style="transform:rotate3d(0, 0, 1,30deg);"><img src="img/hico1.png" alt=""></div>
+                <div class="luck-draw-sign sign-2" style="transform:rotate3d(0, 0, 1,20deg);"><img src="img/hico2.png" alt=""></div>
+                <div class="luck-draw-sign sign-3" style="transform:rotate3d(0, 0, 1,0deg);"><img src="img/hico3.png" alt=""></div>
+                <div class="luck-draw-sign sign-4" style="transform:rotate3d(0, 0, 1,-4deg);"><img src="img/hico4.png" alt=""></div>
+                <div class="luck-draw-sign sign-5" style="transform:rotate3d(0, 0, 1,-10deg);"><img src="img/hico5.png" alt=""></div>
+                <div class="luck-draw-sign sign-6" style="transform:rotate3d(0, 0, 1,12deg);"><img src="img/hico6.png" alt=""></div>
+                <div class="luck-draw-sign sign-7" style="transform:rotate3d(0, 0, 1,-20deg);"><img src="img/hico7.png" alt=""></div>
             </div>
             <div class="luck-draw-box">
                 <img src="img/luck-draw-box.png" alt="">
@@ -37,23 +37,23 @@
 <script>
 
 
-    window.addEventListener("deviceorientation", orientationHandler, false);
+    // window.addEventListener("deviceorientation", orientationHandler, false);
 
-    function orientationHandler(event) {
-        deg = Math.round(-event.gamma);
-        var value = Math.round(deg>0?deg/90*40:deg/90*10)
-        $('.luck-draw-sign-wrap').attr('style', 'transform:translate('+value+'px, 0);');
-        $.each($('.luck-draw .luck-draw-sign'),function(index, el) {
-            var max = getAttr(el,'data-rand-max');
-            var min = getAttr(el,'data-rand-min');
-            var childdeg = getAttr(el,'deg');
-            value = Math.round(deg>0?deg/90*20:deg/90*20)
-            $(el).attr('style', 'transform:rotate3d(0, 0, 1,'+childdeg+'deg) rotate('+value+'deg)');
-        });
-        function getAttr(elements,max){
-            return parseInt($(elements).attr(max));
-        }
-    }
+    // function orientationHandler(event) {
+    //     deg = Math.round(-event.gamma);
+    //     var value = Math.round(deg>0?deg/90*40:deg/90*10)
+    //     $('.luck-draw-sign-wrap').attr('style', 'transform:translate('+value+'px, 0);');
+    //     $.each($('.luck-draw .luck-draw-sign'),function(index, el) {
+    //         var max = getAttr(el,'data-rand-max');
+    //         var min = getAttr(el,'data-rand-min');
+    //         var childdeg = getAttr(el,'deg');
+    //         value = Math.round(deg>0?deg/90*20:deg/90*20)
+    //         $(el).attr('style', 'transform:rotate3d(0, 0, 1,'+childdeg+'deg) rotate('+value+'deg)');
+    //     });
+    //     function getAttr(elements,max){
+    //         return parseInt($(elements).attr(max));
+    //     }
+    // }
 
 
     if (window.DeviceMotionEvent) {
