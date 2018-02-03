@@ -133,6 +133,7 @@
         	if (speed > SHAKE_THRESHOLD) {
         		var audio = document.getElementById("audio");
         		audio.play();
+                $('.luck-draw-sign').addClass('active');
                  alert("你中奖啦！");  // Do something
              }
              last_x = x;
