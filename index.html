@@ -86,6 +86,7 @@
     var SHAKE_THRESHOLD = 6000;
     var last_update = 0;
     var x, y, z, last_x = 0, last_y = 0, last_z = 0;
+    var animate = true;
 
     // var temp = 0
     // test line complete
@@ -131,18 +132,22 @@
         	z = acceleration.z;
         	var speed = Math.abs(x +y + z - last_x - last_y - last_z) / diffTime * 10000;
         	if (speed > SHAKE_THRESHOLD) {
-        		var audio = document.getElementById("audio");
-        		audio.play();
-                $('.luck-draw-sign').addClass('active');
-                setTimeout(function(){
-                    $('.luck-draw-sign').removeClass('active');
-                    alert("你中奖啦！");  // Do something
-                },3000)
-             }
-             last_x = x;
-             last_y = y;
-             last_z = z;
-         }
-     }
- </script>
- </html>
+                if (animate) {
+                    animate = false
+                    var audio = document.getElementById("audio");
+                    audio.play();
+                    $('.luck-draw-sign').addClass('active');
+                    setTimeout(function(){
+                        $('.luck-draw-sign').removeClass('active');
+                        alert("你中奖啦！");
+                        animate = true
+                    },4500)
+                }
+            }
+            last_x = x;
+            last_y = y;
+            last_z = z;
+        }
+    }
+</script>
+</html>
