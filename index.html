@@ -134,6 +134,9 @@
         		var audio = document.getElementById("audio");
         		audio.play();
                 $('.luck-draw-sign').addClass('active');
+                setTimeout(function(){
+                    $('.luck-draw-sign').removeClass('active');
+                },3000)
                  alert("你中奖啦！");  // Do something
              }
              last_x = x;
