@@ -12,8 +12,8 @@
 	url(../img/luck-draw.jpg) center center/100% 100% no-repeat
 	.luck-draw-wrap
 		position relative
-		transform scale(0.9)
-		animation fadeIn 2s ease-in-out 1
+		// transform scale(0.9)
+		// animation fadeIn 0.5s ease-in-out 1
 	.luck-draw-box
 		position relative
 		padding-top 255px
@@ -223,15 +223,24 @@
 }
 
 @keyframes fadeIn
-	0% {
-		transform: rotate3d(0, 0, 1, 0) scale(0)
-		opacity 0
-	}
+	// 0% {
+	// 	transform: rotate(0deg) scale(0,0)
+	// 	opacity 0
+	// }
 	
-	90% {
-		transform: rotate3d(0, 0, 1, 360deg) scale(1) translate(30%,0)
-	}
-	100% {
-		transform: rotate3d(0, 0, 1, 360deg) scale(1) translate(0,0)
+	// 90% {
+	// 	transform: rotate(360deg) scale(1,1) translate(0,30%)
+	// }
+	// 100% {
+	// 	 // rotate(360deg)
+	// 	transform: scale(1,1) translate(0,0)
+	// 	opacity 1
+	// }
+	0%
+		opacity 0
+		transform rotate(0deg) scale(0,0) translate(0,0)
+	90% 
+	 	transform rotate(360deg) scale(1,1) translate(0,30%)
+	100%
 		opacity 1
-	}
+		transform rotate(360deg) scale(1,1) translate(0,0)

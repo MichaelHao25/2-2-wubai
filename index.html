@@ -18,21 +18,21 @@
 		<div class="luck-draw-wrap">
 			<div class="luck-draw-sign-wrap">
 				<!-- style="transform:translate(20px, 0);" -->
-				<div class="luck-draw-sign sign-1"><img src="img/hico10.png" alt=""></div>
+				<div class="luck-draw-sign sign-1 active"><img src="img/hico10.png" alt=""></div>
 				<!-- style="transform:rotate3d(0, 0, 1,30deg);" -->
-				<div class="luck-draw-sign sign-2"><img src="img/hico11.png" alt=""></div>
+				<div class="luck-draw-sign sign-2 active"><img src="img/hico11.png" alt=""></div>
 				<!-- style="transform:rotate3d(0, 0, 1,30deg);" -->
-				<div class="luck-draw-sign sign-3"><img src="img/hico12.png" alt=""></div>
+				<div class="luck-draw-sign sign-3 active"><img src="img/hico12.png" alt=""></div>
 				<!-- style="transform:rotate3d(0, 0, 1,20deg);" -->
-				<div class="luck-draw-sign sign-4"><img src="img/hico13.png" alt=""></div>
+				<div class="luck-draw-sign sign-4 active"><img src="img/hico13.png" alt=""></div>
 				<!-- style="transform:rotate3d(0, 0, 1,0deg);" -->
-				<div class="luck-draw-sign sign-5"><img src="img/hico14.png" alt=""></div>
+				<div class="luck-draw-sign sign-5 active"><img src="img/hico14.png" alt=""></div>
 				<!-- style="transform:rotate3d(0, 0, 1,-4deg);" -->
-				<div class="luck-draw-sign sign-6"><img src="img/hico15.png" alt=""></div>
+				<div class="luck-draw-sign sign-6 active"><img src="img/hico15.png" alt=""></div>
 				<!-- style="transform:rotate3d(0, 0, 1,-10deg);" -->
-				<div class="luck-draw-sign sign-7"><img src="img/hico16.png" alt=""></div>
+				<div class="luck-draw-sign sign-7 active"><img src="img/hico16.png" alt=""></div>
 				<!-- style="transform:rotate3d(0, 0, 1,12deg);" -->
-				<div class="luck-draw-sign sign-8"><img src="img/hico17.png" alt=""></div>
+				<div class="luck-draw-sign sign-8 active"><img src="img/hico17.png" alt=""></div>
 				<!-- style="transform:rotate3d(0, 0, 1,-20deg);" -->
 			</div>
 			<div class="luck-draw-box">
@@ -86,14 +86,15 @@
     var SHAKE_THRESHOLD = 6000;
     var last_update = 0;
     var x, y, z, last_x = 0, last_y = 0, last_z = 0;
-    var animateEnd = true;
+    var animateEnd = false;
 
     // var temp = 0
     // test line complete
-     $('.luck-draw-sign').addClass('init-animation');
+     // $('.luck-draw-sign').addClass('init-animation');
     setTimeout(function(){
-        $('.luck-draw-sign').removeClass('init-animation');
-    },2500)
+        $('.luck-draw-sign').removeClass('active');
+        animateEnd = true;
+    },4500)
     function deviceMotionHandler(eventData) {
     	console.log(eventData);
     	console.log(typeof eventData.acceleration);
