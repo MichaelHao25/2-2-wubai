@@ -1,42 +1,66 @@
 ﻿<!doctype html>
 <html>
 <head design-width="750">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="format-detection" content="telephone=no">
-    <title>佰翔空厨｜过个酥福年</title>
-    <link rel="stylesheet" href="css/style.css" /> <!--页面样式-->
-    <link rel="stylesheet" href="css/common.css" /> <!--常用样式-->
-    <link rel="stylesheet" href="css/animate.min.css" /> <!--CSS3动画库-->
-    <link rel="stylesheet" href="css/c.css">
-    <script src="js/auto-size.js"></script> <!--设置字体大小-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<title>佰翔空厨｜过个酥福年</title>
+	<link rel="stylesheet" href="css/style.css" /> <!--页面样式-->
+	<link rel="stylesheet" href="css/common.css" /> <!--常用样式-->
+	<link rel="stylesheet" href="css/animate.min.css" /> <!--CSS3动画库-->
+	<link rel="stylesheet" href="css/c.css">
+	<script src="js/auto-size.js"></script> <!--设置字体大小-->
 </head>
 <body>
 	<div class="mobile-wrap center luck-draw">
-        <div class="luck-draw-wrap">
-            <div class="luck-draw-sign-wrap" style="transform:translate(20px, 0);">
-                <div class="luck-draw-sign sign-1" style="transform:rotate3d(0, 0, 1,30deg);"><img src="img/hico1.png" alt=""></div>
-                <div class="luck-draw-sign sign-2" style="transform:rotate3d(0, 0, 1,20deg);"><img src="img/hico2.png" alt=""></div>
-                <div class="luck-draw-sign sign-3" style="transform:rotate3d(0, 0, 1,0deg);"><img src="img/hico3.png" alt=""></div>
-                <div class="luck-draw-sign sign-4" style="transform:rotate3d(0, 0, 1,-4deg);"><img src="img/hico4.png" alt=""></div>
-                <div class="luck-draw-sign sign-5" style="transform:rotate3d(0, 0, 1,-10deg);"><img src="img/hico5.png" alt=""></div>
-                <div class="luck-draw-sign sign-6" style="transform:rotate3d(0, 0, 1,12deg);"><img src="img/hico6.png" alt=""></div>
-                <div class="luck-draw-sign sign-7" style="transform:rotate3d(0, 0, 1,-20deg);"><img src="img/hico7.png" alt=""></div>
-            </div>
-            <div class="luck-draw-box">
-                <img src="img/luck-draw-box.png" alt="">
-            </div>
-        </div>
-    </div><!--mobile_wrap-->
+		<div class="luck-draw-wrap">
+			<div class="luck-draw-sign-wrap">
+				<!-- style="transform:translate(20px, 0);" -->
+				<div class="luck-draw-sign sign-1"><img src="img/hico10.png" alt=""></div>
+				<!-- style="transform:rotate3d(0, 0, 1,30deg);" -->
+				<div class="luck-draw-sign sign-2"><img src="img/hico11.png" alt=""></div>
+				<!-- style="transform:rotate3d(0, 0, 1,30deg);" -->
+				<div class="luck-draw-sign sign-3"><img src="img/hico12.png" alt=""></div>
+				<!-- style="transform:rotate3d(0, 0, 1,20deg);" -->
+				<div class="luck-draw-sign sign-4"><img src="img/hico13.png" alt=""></div>
+				<!-- style="transform:rotate3d(0, 0, 1,0deg);" -->
+				<div class="luck-draw-sign sign-5"><img src="img/hico14.png" alt=""></div>
+				<!-- style="transform:rotate3d(0, 0, 1,-4deg);" -->
+				<div class="luck-draw-sign sign-6"><img src="img/hico15.png" alt=""></div>
+				<!-- style="transform:rotate3d(0, 0, 1,-10deg);" -->
+				<div class="luck-draw-sign sign-7"><img src="img/hico16.png" alt=""></div>
+				<!-- style="transform:rotate3d(0, 0, 1,12deg);" -->
+				<div class="luck-draw-sign sign-8"><img src="img/hico17.png" alt=""></div>
+				<!-- style="transform:rotate3d(0, 0, 1,-20deg);" -->
+			</div>
+			<div class="luck-draw-box">
+				<img src="img/luck-draw-box.png" alt="">
+			</div>
+		</div>
+	</div><!--mobile_wrap-->
+	<audio src="audio/load.mp3" id="audio"></audio>
 </body>
 <script src="js/jquery-2.2.4.min.js"></script><!--jQ库-->
 <script src="js/swiper-3.3.1.jquery.min.js"></script> <!--轮播库-->
 <script src="js/version-3.2.8.js"></script> <!--封装函数-->
 <script>
 
+	
+	$('body').one('touchstart', function () {
+		var audio = document.getElementById("audio");
+		audio.play();
+		audio.setAttribute('src', 'audio/sucess.wav');
+		audio.load();
+	})
 
+	document.addEventListener("WeixinJSBridgeReady", function () {
+		var audio = document.getElementById("audio");
+		audio.play();
+		audio.setAttribute('src', 'audio/sucess.wav');
+		audio.load();
+	}, false);
     // window.addEventListener("deviceorientation", orientationHandler, false);
 
     // function orientationHandler(event) {
@@ -57,9 +81,9 @@
 
 
     if (window.DeviceMotionEvent) {
-        window.addEventListener('devicemotion',deviceMotionHandler,false);
+    	window.addEventListener('devicemotion',deviceMotionHandler,false);
     }
-    var SHAKE_THRESHOLD = 4000;
+    var SHAKE_THRESHOLD = 6000;
     var last_update = 0;
     var x, y, z, last_x = 0, last_y = 0, last_z = 0;
 
@@ -67,52 +91,54 @@
     // test line complete
 
     function deviceMotionHandler(eventData) {
-        console.log(eventData);
-        console.log(typeof eventData.acceleration);
+    	console.log(eventData);
+    	console.log(typeof eventData.acceleration);
 
         // test line complete
         // temp++;
         // $('body').html(temp);
         // test line complete
-        for(var attr in eventData){
-            if (attr == 'acceleration') {
-                console.log(eventData[attr]);
-                console.log(Object.entries(eventData[attr]));
-                $('body').appendTo(Object.entries(eventData[attr]))
-            }
-            if (attr == 'accelerationIncludingGravity') {
-                console.log(eventData[attr]);
-                console.log(Object.entries(eventData[attr]));
-                $('body').appendTo(Object.entries(eventData[attr]))
-            }
-            if (attr == 'interval') {
-                console.log(eventData[attr]);
-                console.log(Object.entries(eventData[attr]));
-                $('body').appendTo(Object.entries(eventData[attr]))
-            }
-            if (attr == 'rotationRate') {
-                console.log(eventData[attr]);
-                console.log(Object.entries(eventData[attr]));
-                $('body').appendTo(Object.entries(eventData[attr]))
-            }
+        // for(var attr in eventData){
+        // 	if (attr == 'acceleration') {
+        // 		console.log(eventData[attr]);
+        // 		console.log(Object.entries(eventData[attr]));
+        // 		$('body').appendTo(Object.entries(eventData[attr]))
+        // 	}
+        // 	if (attr == 'accelerationIncludingGravity') {
+        // 		console.log(eventData[attr]);
+        // 		console.log(Object.entries(eventData[attr]));
+        // 		$('body').appendTo(Object.entries(eventData[attr]))
+        // 	}
+        // 	if (attr == 'interval') {
+        // 		console.log(eventData[attr]);
+        // 		console.log(Object.entries(eventData[attr]));
+        // 		$('body').appendTo(Object.entries(eventData[attr]))
+        // 	}
+        // 	if (attr == 'rotationRate') {
+        // 		console.log(eventData[attr]);
+        // 		console.log(Object.entries(eventData[attr]));
+        // 		$('body').appendTo(Object.entries(eventData[attr]))
+        // 	}
 
-        }
-       // var acceleration =eventData.accelerationIncludingGravity;
-       // var curTime = new Date().getTime();
-       // if ((curTime-last_update)> 10) {
-       //     var diffTime = curTime -last_update;
-       //     last_update = curTime;
-       //     x = acceleration.x;
-       //     y = acceleration.y;
-       //     z = acceleration.z;
-       //     var speed = Math.abs(x +y + z - last_x - last_y - last_z) / diffTime * 10000;
-       //     if (speed > SHAKE_THRESHOLD) {
-       //           alert("你中奖啦！");  // Do something
-       //       }
-       //       last_x = x;
-       //       last_y = y;
-       //       last_z = z;
-       //   }
-   }
-</script>
-</html>
+        // }
+        var acceleration =eventData.accelerationIncludingGravity;
+        var curTime = new Date().getTime();
+        if ((curTime-last_update)> 10) {
+        	var diffTime = curTime -last_update;
+        	last_update = curTime;
+        	x = acceleration.x;
+        	y = acceleration.y;
+        	z = acceleration.z;
+        	var speed = Math.abs(x +y + z - last_x - last_y - last_z) / diffTime * 10000;
+        	if (speed > SHAKE_THRESHOLD) {
+        		var audio = document.getElementById("audio");
+        		audio.play();
+                 alert("你中奖啦！");  // Do something
+             }
+             last_x = x;
+             last_y = y;
+             last_z = z;
+         }
+     }
+ </script>
+ </html>
