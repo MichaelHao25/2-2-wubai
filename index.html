@@ -90,7 +90,10 @@
 
     // var temp = 0
     // test line complete
-
+     $('.luck-draw-sign').addClass('.init-animation');
+    setTimeout(function(){
+        $('.luck-draw-sign').removeClass('.init-animation');
+    },2500)
     function deviceMotionHandler(eventData) {
     	console.log(eventData);
     	console.log(typeof eventData.acceleration);
